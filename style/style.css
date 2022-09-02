@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'QuirkyStitch';
+    src: url('../fonts/QuirkyStitch.ttf');
+}
+
+body {
+    background-color: blanchedalmond;
+}
+
+.cajita {
+    margin: auto;
+    padding: 150px;
+    width: 50%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'QuirkyStitch';
+    font-size: 70px;
+    font-weight: 100;
+}
