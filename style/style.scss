@@ -205,36 +205,68 @@ h1 {
     }
 }
 
-/*estilos para PPT*/
+/*estilos para juegos*/
+
+.secBody {
+    display: grid;
+    grid-template-columns: 500px 500px;
+    grid-template-rows: 350px 30px;
+    align-items: center;
+    justify-items: center;
+
+    h3, h4, h2 {
+        font-family: 'Antipasto';
+    }
+
+    .footer {
+        grid-column: 1 / span 2;
+    }
+
+    .Mochis {
+        margin: auto;
+        .carita {
+            font-size: 40px;
+            left: 28%;
+        }
+    }
+}
+
+/* PPT */
+
+.botones {
+    padding: 20px;
+}
 
 .elecciones {
-    padding: 20px 0;
+    padding: 30px 0;
 }
 
 button {
     border: none;
+    border-radius: 10px;
     padding: 15px 32px;
     background-color: #006d77;
-    font-family: 'QuirkyStitch';
+    font-family: 'CuteSmile';
+    font-size: 20px;
 }
 
 #gameboard {
-    width: 400px;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
 }
 
 .box {
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: blueviolet;
-    font-size: 120px;
+    font-size: 70px;
     border-right: 4px solid;
     border-bottom: 4px solid;
+    font-family: 'Antipasto';
 }
 
 .box:nth-child(3n) {
@@ -243,22 +275,4 @@ button {
 
 .box:nth-child(6) ~ .box {
     border-bottom: none;
-}
-
-.mainIm {
-    height: 200px;
-    width: 200px;
-    padding: 30px;
-}
-
-p {
-    padding-top: 20px;
-}
-
-.pptTexto {
-    font-family: 'Yusei Magic', sans-serif;
-}
-
-.gameboard {
-    padding: 30px 0;
 }

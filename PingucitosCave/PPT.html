@@ -5,32 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
     <link href='../style/style.css' rel='stylesheet'>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     <title>Piedra, Papel o Tijeras</title>
 </head>
-<body>
+<body class="mainPg">
+    <section class="backgroundAnimado">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+        <img class="estrella" src="/images/estrella.png" alt="Estrella Rosa">
+    </section>
     <header class="cajita">
         <h1>Juguemos piedra, papel o tijeras</h1>
     </header>
-    <main>
-        <h3 class="pptTexto">Vamos a jugar piedra, papel o tijeras ( ノ-_-)ノﾞ_□ VS □_ヾ(^-^ヽ)</h3>
-        <h3 class="pptTexto">Confía en mí, prometo no hacer trampa (￣ω￣)/</h3>
-        <section class="gameboard">
-            <h4 class="pptTexto">Elige tu favorito!</h4>
+    <main class="secBody">
+        <section class="gameBoard">
+            <h3 class="pptTexto">Elige tu favorito!</h3>
             <section class="botones">
                 <button id="piedra">Piedra</button>
                 <button id="papel">Papel</button>
                 <button id="tijeras">Tijeras</button>
             </section>
             <section class="elecciones">
-                <h4 class="pptTexto">Tu elección: <span id="eleccion-usuario"></span></h4>
-                <h4 class="pptTexto">Mi elección: <span id="eleccion-compu"></span></h4>
+                <h2 class="pptTexto">Tu elección: <span id="eleccion-usuario"></span></h2>
+                <h2 class="pptTexto">Mi elección: <span id="eleccion-compu"></span></h2>
             </section>
             <h3 class="pptTexto">Resultado: <span id="resultado"></span></h3>
         </section>
-        <p class="regresar">Regresar al <a href="../index.html">Menú Principal</a></p>
+        <section class="Mochis">
+            <section class="cuerpo">
+                <img class="mochi" src="/images/mochi.png" alt="Mochis Estrellita">
+                <h5 class="carita">o˘◡˘o</h5>
+            </section>
+            <section class="voz">
+                <p class="textos">Confía en mí, prometo no hacer trampa</p>
+            </section>
+        </section>
+        <h4 class="footer">Regresar al <a href="../index.html">Menú Principal</a></h4>
     </main>
     <script src="../JS/PPT.js"></script>
 </body>
