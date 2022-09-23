@@ -1,26 +1,253 @@
-* {
-    margin: 0;
-    padding: 0;
-}
-
 @font-face {
-    font-family: 'QuirkyStitch';
-    src: url('../fonts/QuirkyStitch.ttf');
+  font-family: "CuteSmile";
+  src: url("../fonts/CuteSmileDemoRegular.ttf");
+}
+@font-face {
+  font-family: "Antipasto";
+  src: url(../fonts/antipasto.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 body {
-    background-color: blanchedalmond;
+  background: url(../images/background.jpg);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.cajita {
-    margin: auto;
-    padding: 150px;
-    width: 50%;
-    text-align: center;
+.mainPg {
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin: 50px auto;
+}
+
+.backgroundAnimado {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 h1 {
-    font-family: 'QuirkyStitch';
-    font-size: 70px;
-    font-weight: 100;
+  font-family: "CuteSmile";
+  font-size: 60px;
+  text-align: center;
+  color: #b56576;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #deaaff, 0 0 82px #deaaff, 0 0 92px #deaaff, 0 0 102px #deaaff;
 }
+
+.estrella {
+  display: block;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+}
+
+@keyframes animacionEstrellas {
+  0% {
+    width: 35px;
+    height: 35px;
+  }
+  50% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+  }
+  100% {
+    width: 15px;
+    height: 15px;
+    opacity: 0;
+  }
+}
+.backgroundAnimado img:nth-child(1) {
+  left: 30%;
+  top: 90%;
+  animation: animacionEstrellas 1.2s linear infinite alternate both;
+}
+
+.backgroundAnimado img:nth-child(2) {
+  left: 80%;
+  top: 50%;
+  animation: animacionEstrellas 1.1s linear infinite alternate-reverse both;
+}
+
+.backgroundAnimado img:nth-child(3) {
+  left: 5%;
+  top: 60%;
+  animation: animacionEstrellas 1s linear infinite alternate both;
+}
+
+.backgroundAnimado img:nth-child(4) {
+  left: 90%;
+  top: 20%;
+  animation: animacionEstrellas 1.3s linear infinite alternate-reverse both;
+}
+
+.backgroundAnimado img:nth-child(5) {
+  left: 10%;
+  top: 15%;
+  animation: animacionEstrellas 1s linear infinite alternate both;
+}
+
+.backgroundAnimado img:nth-child(6) {
+  left: 25%;
+  top: 30%;
+  animation: animacionEstrellas 1.1s linear infinite alternate-reverse both;
+}
+
+.backgroundAnimado img:nth-child(7) {
+  left: 86%;
+  top: 85%;
+  animation: animacionEstrellas 1.2s linear infinite alternate both;
+}
+
+.backgroundAnimado img:nth-child(8) {
+  left: 70%;
+  top: 9%;
+  animation: animacionEstrellas 1.4s linear infinite alternate both;
+}
+
+.mainBody {
+  display: flex;
+}
+
+.juegos {
+  width: 400px;
+  height: 300px;
+}
+
+.nube {
+  width: 350px;
+  height: 180px;
+}
+
+.gato {
+  position: relative;
+  transform: rotate(10deg);
+  left: 48%;
+  top: 7%;
+}
+.gato .jueguitos {
+  position: absolute;
+  text-align: center;
+  font-family: "Antipasto";
+  top: 40%;
+  left: 40%;
+}
+
+.ppt {
+  position: relative;
+  transform: rotate(-13deg);
+  left: -7%;
+  top: -30%;
+}
+.ppt .jueguitos {
+  top: 50%;
+  left: 20%;
+  position: absolute;
+  text-align: center;
+  font-family: "Antipasto";
+}
+
+.progreso {
+  position: relative;
+  transform: rotate(-2deg);
+  left: 50%;
+  top: -85%;
+}
+.progreso .jueguitos {
+  top: 50%;
+  left: 30%;
+  position: absolute;
+  text-align: center;
+  font-family: "Antipasto";
+}
+
+.Mochis {
+  margin-left: 250px;
+}
+.Mochis .cuerpo {
+  position: relative;
+}
+.Mochis .carita {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  text-align: center;
+  font-size: 30px;
+  color: #b56576;
+  font-family: "Antipasto";
+}
+.Mochis .voz {
+  font-family: "CuteSmile";
+  font-size: 20px;
+  width: 254px;
+  text-align: center;
+  color: #f5cac3;
+}
+
+/*estilos para PPT*/
+.elecciones {
+  padding: 20px 0;
+}
+
+button {
+  border: none;
+  padding: 15px 32px;
+  background-color: #006d77;
+  font-family: "QuirkyStitch";
+}
+
+#gameboard {
+  width: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.box {
+  height: 120px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blueviolet;
+  font-size: 120px;
+  border-right: 4px solid;
+  border-bottom: 4px solid;
+}
+
+.box:nth-child(3n) {
+  border-right: none;
+}
+
+.box:nth-child(6) ~ .box {
+  border-bottom: none;
+}
+
+.mainIm {
+  height: 200px;
+  width: 200px;
+  padding: 30px;
+}
+
+p {
+  padding-top: 20px;
+}
+
+.pptTexto {
+  font-family: "Yusei Magic", sans-serif;
+}
+
+.gameboard {
+  padding: 30px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
