@@ -184,6 +184,7 @@ h1 {
 
 .Mochis {
     margin-left: 250px;
+    text-align: center;
     .cuerpo {
         position: relative;
     }
@@ -191,7 +192,6 @@ h1 {
         position: absolute;
         top: 40%;
         left: 30%;
-        text-align: center;
         font-size: 30px;
         color: #b56576;
         font-family: 'Antipasto';
@@ -200,7 +200,6 @@ h1 {
         font-family: 'CuteSmile';
         font-size: 20px;
         width: 254px;
-        text-align: center;
         color: #f5cac3;
     }
 }
@@ -223,10 +222,15 @@ h1 {
     }
 
     .Mochis {
+        width: 330px;
         margin: auto;
         .carita {
             font-size: 40px;
-            left: 28%;
+            left: 36%;
+            margin: auto;
+        }
+        .voz{
+            margin: auto;
         }
     }
 }
@@ -239,6 +243,14 @@ h1 {
 
 .elecciones {
     padding: 30px 0;
+}
+
+.score {
+    display: flex;
+    justify-content: space-around;
+    h3{
+        font-family: 'Verdana';
+    }
 }
 
 button {

@@ -172,6 +172,7 @@ h1 {
 
 .Mochis {
   margin-left: 250px;
+  text-align: center;
 }
 .Mochis .cuerpo {
   position: relative;
@@ -180,7 +181,6 @@ h1 {
   position: absolute;
   top: 40%;
   left: 30%;
-  text-align: center;
   font-size: 30px;
   color: #b56576;
   font-family: "Antipasto";
@@ -189,7 +189,6 @@ h1 {
   font-family: "CuteSmile";
   font-size: 20px;
   width: 254px;
-  text-align: center;
   color: #f5cac3;
 }
 
@@ -208,11 +207,16 @@ h1 {
   grid-column: 1/span 2;
 }
 .secBody .Mochis {
+  width: 330px;
   margin: auto;
 }
 .secBody .Mochis .carita {
   font-size: 40px;
-  left: 28%;
+  left: 36%;
+  margin: auto;
+}
+.secBody .Mochis .voz {
+  margin: auto;
 }
 
 /* PPT */
@@ -222,6 +226,14 @@ h1 {
 
 .elecciones {
   padding: 30px 0;
+}
+
+.score {
+  display: flex;
+  justify-content: space-around;
+}
+.score h3 {
+  font-family: "Verdana";
 }
 
 button {
