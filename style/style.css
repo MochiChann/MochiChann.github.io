@@ -18,12 +18,29 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media only screen and (max-width: 450px) {
+  body {
+    background: none;
+    background-color: #3c425f;
+  }
+}
 
 .mainPg {
   width: 1000px;
   display: flex;
   flex-direction: column;
   margin: 50px auto;
+}
+@media only screen and (max-width: 680px) {
+  .mainPg {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .mainPg {
+    width: 390px;
+    margin-left: 20px;
+  }
 }
 
 .backgroundAnimado {
@@ -41,6 +58,17 @@ h1 {
   text-align: center;
   color: #b56576;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #deaaff, 0 0 82px #deaaff, 0 0 92px #deaaff, 0 0 102px #deaaff;
+}
+@media only screen and (max-width: 680px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 30px;
+    text-align: left;
+  }
 }
 
 .estrella {
@@ -117,15 +145,33 @@ h1 {
 .mainBody {
   display: flex;
 }
+@media only screen and (max-width: 680px) {
+  .mainBody {
+    flex-direction: column;
+  }
+}
 
 .juegos {
   width: 400px;
   height: 300px;
 }
+@media only screen and (max-width: 450px) {
+  .juegos {
+    width: 300px;
+    height: 420px;
+  }
+}
 
 .nube {
   width: 350px;
   height: 180px;
+}
+@media only screen and (max-width: 450px) {
+  .nube {
+    width: 220px;
+    height: 110px;
+    margin-top: 10px;
+  }
 }
 
 .gato {
@@ -141,6 +187,29 @@ h1 {
   top: 40%;
   left: 40%;
 }
+@media only screen and (max-width: 680px) {
+  .gato .jueguitos {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .gato .jueguitos {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .gato .jueguitos {
+    left: 30%;
+    top: 40%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .gato {
+    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+  }
+}
 
 .ppt {
   position: relative;
@@ -154,6 +223,30 @@ h1 {
   position: absolute;
   text-align: center;
   font-family: "Antipasto";
+}
+@media only screen and (max-width: 680px) {
+  .ppt .jueguitos {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ppt .jueguitos {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ppt .jueguitos {
+    left: 20%;
+    top: 35%;
+    width: 100px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .ppt {
+    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+  }
 }
 
 .progreso {
@@ -169,10 +262,39 @@ h1 {
   text-align: center;
   font-family: "Antipasto";
 }
+@media only screen and (max-width: 680px) {
+  .progreso .jueguitos {
+    font-size: 40px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .progreso .jueguitos {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .progreso .jueguitos {
+    left: 25%;
+    top: 40%;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .progreso {
+    transform: rotate(0deg);
+    left: 0%;
+    top: 0%;
+  }
+}
 
 .Mochis {
   margin-left: 250px;
   text-align: center;
+}
+@media only screen and (max-width: 450px) {
+  .Mochis {
+    width: 120px;
+    margin-left: 10px;
+  }
 }
 .Mochis .cuerpo {
   position: relative;
@@ -185,11 +307,40 @@ h1 {
   color: #b56576;
   font-family: "Antipasto";
 }
+@media only screen and (max-width: 450px) {
+  .Mochis .carita {
+    top: 38%;
+    left: 22%;
+    font-size: 20px;
+  }
+}
 .Mochis .voz {
   font-family: "CuteSmile";
   font-size: 20px;
   width: 254px;
   color: #f5cac3;
+}
+@media only screen and (max-width: 450px) {
+  .Mochis .voz {
+    width: 120px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .Mochis .mochi {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+.cartaOkami {
+  position: absolute;
+  left: 90%;
+  top: 70%;
+}
+
+.cartita {
+  width: 80px;
+  height: 100px;
 }
 
 /*estilos para juegos*/
@@ -200,6 +351,13 @@ h1 {
   align-items: center;
   justify-items: center;
 }
+@media only screen and (max-width: 450px) {
+  .secBody {
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+  }
+}
 .secBody h3, .secBody h4, .secBody h2 {
   font-family: "Antipasto";
 }
@@ -208,12 +366,17 @@ h1 {
 }
 .secBody .Mochis {
   width: 330px;
-  margin: auto;
+  margin: 30px auto;
 }
 .secBody .Mochis .carita {
   font-size: 40px;
-  left: 36%;
+  left: 40%;
   margin: auto;
+}
+@media only screen and (max-width: 450px) {
+  .secBody .Mochis .carita {
+    font-size: 30px;
+  }
 }
 .secBody .Mochis .voz {
   margin: auto;

@@ -8,11 +8,27 @@
     src: url(../fonts/antipasto.ttf);
 }
 
+@mixin devices ($breakpoint) {
+  
+    @if $breakpoint == tablet {    
+    @media only screen and (max-width: 680px) {
+      @content;
+    }
+  }
+ 
+  @if $breakpoint == mobile {
+    @media only screen and (max-width: 450px) {
+      @content;
+    }
+  }
+}
+
 * {
     margin: 0;
     padding: 0;
     text-decoration: none;
 }
+
 
 $mainBck:"../images/background.jpg";
 
@@ -21,6 +37,11 @@ body {
     width: 100%; 
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include devices(mobile) {
+        background: none;
+        background-color: #3c425f;
+    }
 }
 
 .mainPg {
@@ -28,6 +49,15 @@ body {
     display: flex;
     flex-direction: column;
     margin: 50px auto;
+
+    @include devices(tablet) {
+        width: 600px;
+    }
+
+    @include devices(mobile) {
+        width: 390px;
+        margin-left: 20px;
+    }
 }
 
 .backgroundAnimado {
@@ -52,6 +82,15 @@ h1 {
     0 0 82px #deaaff,
     0 0 92px #deaaff,
     0 0 102px #deaaff;
+
+    @include devices(tablet) {
+        font-size: 50px;
+    }
+
+    @include devices(mobile) {
+        font-size: 30px;
+        text-align: left
+    }
 }
 
 .estrella {
@@ -128,22 +167,44 @@ h1 {
 
 .mainBody {
     display: flex;
+    @include devices(tablet) {
+        flex-direction: column;
+    }
 }
 
 .juegos {
     width: 400px;
     height: 300px;
+
+    @include devices(mobile) {
+        width: 300px;
+        height: 420px;
+    }
+
 }
 
 .nube {
     width: 350px;
     height: 180px;
+
+    @include devices(mobile) {
+        width: 220px;
+        height: 110px;
+        margin-top: 10px;
+    }
 }
 
 @mixin nubecitas {
     position: absolute;
     text-align: center;
     font-family: 'Antipasto';
+    @include devices(tablet) {
+        font-size: 40px;
+    }
+
+    @include devices(mobile) {
+        font-size: 20px;
+    }
 }
 
 .gato {
@@ -155,6 +216,17 @@ h1 {
         @include nubecitas();
         top: 40%;
         left: 40%;
+    
+        @include devices(mobile) {
+            left: 30%;
+            top: 40%;
+        }
+    }
+
+    @include devices(mobile) {
+        transform: rotate(0deg);
+        left: 0%;
+        top: 0%;
     }
 }
 
@@ -167,6 +239,18 @@ h1 {
         top: 50%;
         left: 20%;
         @include nubecitas();
+    
+        @include devices(mobile) {
+            left: 20%;
+            top: 35%;
+            width: 100px;
+        }
+    }
+
+    @include devices(mobile) {
+        transform: rotate(0deg);
+        left: 0%;
+        top: 0%;
     }
 }
 
@@ -175,19 +259,37 @@ h1 {
     transform: rotate(-2deg);
     left: 50%;
     top: -85%;
+    
     .jueguitos {
         top: 50%;
         left: 30%;
         @include nubecitas();
+    
+        @include devices(mobile) {
+            left: 25%;
+            top: 40%;
+        }
+    }
+
+    @include devices(mobile) {
+        transform: rotate(0deg);
+        left: 0%;
+        top: 0%;
     }
 }
 
 .Mochis {
     margin-left: 250px;
     text-align: center;
+    @include devices(mobile) {
+        width: 120px;
+        margin-left: 10px;
+    }
+    
     .cuerpo {
         position: relative;
     }
+
     .carita {
         position: absolute;
         top: 40%;
@@ -195,14 +297,41 @@ h1 {
         font-size: 30px;
         color: #b56576;
         font-family: 'Antipasto';
+        @include devices(mobile) {
+            top: 38%;
+            left: 22%;
+            font-size: 20px;
+        }
     }
     .voz {
         font-family: 'CuteSmile';
         font-size: 20px;
         width: 254px;
         color: #f5cac3;
+        @include devices(mobile) {
+            width: 120px;
+        }
+    }
+
+    .mochi {
+        @include devices(mobile) {
+            width: 120px;
+            height: 120px;
+        }
     }
 }
+
+.cartaOkami {
+    position: absolute;
+    left: 90%;
+    top: 70%;
+}
+
+.cartita {
+    width: 80px;
+    height: 100px;
+}
+
 
 /*estilos para juegos*/
 
@@ -212,6 +341,12 @@ h1 {
     grid-template-rows: 350px 30px;
     align-items: center;
     justify-items: center;
+
+    @include devices(mobile) {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+    }
 
     h3, h4, h2 {
         font-family: 'Antipasto';
@@ -223,11 +358,14 @@ h1 {
 
     .Mochis {
         width: 330px;
-        margin: auto;
+        margin: 30px auto;
         .carita {
             font-size: 40px;
-            left: 36%;
+            left: 40%;
             margin: auto;
+            @include devices(mobile) {
+                font-size: 30px;
+            }
         }
         .voz{
             margin: auto;
