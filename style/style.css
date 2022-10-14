@@ -6,6 +6,10 @@
   font-family: "Antipasto";
   src: url(../fonts/antipasto.ttf);
 }
+@font-face {
+  font-family: "Aileron";
+  src: url(../fonts/aileron.otf);
+}
 * {
   margin: 0;
   padding: 0;
@@ -249,13 +253,13 @@ h1 {
   }
 }
 
-.progreso {
+.puerquito {
   position: relative;
   transform: rotate(-2deg);
   left: 50%;
   top: -85%;
 }
-.progreso .jueguitos {
+.puerquito .jueguitos {
   top: 50%;
   left: 30%;
   position: absolute;
@@ -263,23 +267,23 @@ h1 {
   font-family: "Antipasto";
 }
 @media only screen and (max-width: 680px) {
-  .progreso .jueguitos {
+  .puerquito .jueguitos {
     font-size: 40px;
   }
 }
 @media only screen and (max-width: 450px) {
-  .progreso .jueguitos {
+  .puerquito .jueguitos {
     font-size: 20px;
   }
 }
 @media only screen and (max-width: 450px) {
-  .progreso .jueguitos {
+  .puerquito .jueguitos {
     left: 25%;
     top: 40%;
   }
 }
 @media only screen and (max-width: 450px) {
-  .progreso {
+  .puerquito {
     transform: rotate(0deg);
     left: 0%;
     top: 0%;
@@ -433,6 +437,57 @@ button {
 
 .box:nth-child(6) ~ .box {
   border-bottom: none;
+}
+
+/*Puerquito*/
+h5 {
+  font-family: "Aileron";
+  color: #eed7c5;
+}
+@media only screen and (max-width: 450px) {
+  h5 {
+    font-size: 10px;
+  }
+}
+
+.scoreBoard {
+  display: flex;
+  justify-content: space-around;
+  font-size: 20px;
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.grid {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 620px;
+  height: 230px;
+  background-color: #3c425f;
+  border-radius: 10px;
+}
+@media only screen and (max-width: 450px) {
+  .grid {
+    width: 250px;
+    height: 600px;
+  }
+}
+
+.cuadro {
+  width: 105px;
+  height: 95px;
+  background-color: #f5cac3;
+}
+
+/*JavaScript*/
+.puerco {
+  background-image: url(../images/puerquito.png);
+  background-position: center;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */

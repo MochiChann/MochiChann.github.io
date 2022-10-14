@@ -8,6 +8,11 @@
     src: url(../fonts/antipasto.ttf);
 }
 
+@font-face {
+    font-family: 'Aileron';
+    src: url(../fonts/aileron.otf);
+}
+
 @mixin devices ($breakpoint) {
   
     @if $breakpoint == tablet {    
@@ -254,7 +259,7 @@ h1 {
     }
 }
 
-.progreso {
+.puerquito {
     position: relative;
     transform: rotate(-2deg);
     left: 50%;
@@ -425,4 +430,55 @@ button {
 
 .box:nth-child(6) ~ .box {
     border-bottom: none;
+}
+
+/*Puerquito*/
+
+h5 {
+    font-family: 'Aileron';
+    color: #eed7c5;
+    @include devices(mobile) {
+        font-size: 10px;
+    }
+}
+
+.scoreBoard {
+        display: flex;
+        justify-content: space-around;
+        font-size: 20px;
+        text-align: center;
+        width: 200px;
+        margin: auto;
+        padding-top: 20px;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 620px;
+    height: 230px;
+    background-color: #3c425f;
+    border-radius: 10px;
+    @include devices(mobile) {
+        width: 250px;
+        height: 600px;
+    }
+}
+
+.cuadro {
+    width: 105px;
+    height: 95px;
+    background-color: #f5cac3;
+}
+
+/*JavaScript*/
+
+$puerco:"../images/puerquito.png";
+
+.puerco {
+    background-image: url(#{$puerco});
+    background-position: center;
+    background-size: cover;
 }
